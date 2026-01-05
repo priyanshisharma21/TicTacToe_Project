@@ -95,7 +95,7 @@ void computerMove() {
         col = rand() % 3;
         if (board[row][col] == ' ') {
             board[row][col] = 'O';
-            printf("💻 Computer chose: %d %d\n", row, col);
+            printf("Computer chose: %d %d\n", row, col);
             break;
         }
     }
@@ -117,14 +117,14 @@ void playHumanVsHuman() {
         if (checkWin()) {
             clear_screen();
             printBoard();
-            printf("🎉 Player %d wins!\n", player);
+            printf("Player %d wins!\n", player);
             break;
         }
 
         if (isDraw()) {
             clear_screen();
             printBoard();
-            printf("😅 It's a draw!\n");
+            printf("It's a draw!\n");
             break;
         }
 
@@ -154,14 +154,14 @@ void playHumanVsComputer() {
         if (checkWin()) {
             clear_screen();
             printBoard();
-            printf("🎉 You win!\n");
+            printf("You win!\n");
             break;
         }
 
         if (isDraw()) {
             clear_screen();
             printBoard();
-            printf("😅 It's a draw!\n");
+            printf("It's a draw!\n");
             break;
         }
 
@@ -170,14 +170,14 @@ void playHumanVsComputer() {
         if (checkWin()) {
             clear_screen();
             printBoard();
-            printf("💻 Computer wins!\n");
+            printf("Computer wins!\n");
             break;
         }
 
         if (isDraw()) {
             clear_screen();
             printBoard();
-            printf("😅 It's a draw!\n");
+            printf("It's a draw!\n");
             break;
         }
     }
@@ -191,7 +191,7 @@ void playGame(int mode) {
     else if (mode == 2)
         playHumanVsHuman();
     else
-        printf("❌ Invalid mode selected!\n");
+        printf("Invalid mode selected!\n");
 }
 
 // ---------- MAIN ----------
@@ -203,7 +203,7 @@ int main() {
 
     do {
         clear_screen();
-        printf("🎮 TIC TAC TOE GAME 🎮\n");
+        printf("TIC TAC TOE GAME\n");
         printf("Select mode: 1 = Computer, 2 = Human: ");
         scanf("%d", &mode);
 
@@ -215,6 +215,6 @@ int main() {
     } while (playAgain == 'y' || playAgain == 'Y');
 
     clear_screen();
-    printf("\n👋 Thanks for playing Tic Tac Toe!\n");
+    printf("\n Thanks for playing Tic Tac Toe!\n");
     return 0;
 }
